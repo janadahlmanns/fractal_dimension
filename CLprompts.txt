@@ -1,0 +1,26 @@
+ffmpeg -i LVAnimation.mp4 -vf "fps=25,scale=540:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 lvanimation.gif
+smaller files:
+ffmpeg -i media/videos/lorenz/600p50/Lorenz.mp4 -vf "fps=30,scale=600:-1:flags=lanczos" -loop 0 lorenz_600.gif
+
+
+
+ manim -pql -r 1080,1080 --fps 50 lotka_volterra/lvanimation.py LVAnimation
+
+ manim -pql lotka_volterra/lvanimation.py LVAnimation
+
+
+    manim -pql filename.py --flush_cache
+
+ my colors:
+ black #000000
+ dark blue #0E4058
+ dark green #0E584D
+ middle blue #577F8D
+ light blue #AFCBCF
+ contrast orange #E79E16
+ contrast yellow  #FFDE05
+ contrast red #9E2B35
+ dark gray #3A3A3A
+ light gray #757575
+ lightest gray #C3C3C3
+ white #FFFFFF
